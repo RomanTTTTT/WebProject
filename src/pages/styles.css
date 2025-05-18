@@ -1,0 +1,483 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc;
+    color: #1d1d1d;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  header {
+    background-color: #003366;
+    color: white;
+    padding: 1rem 0;
+  }
+  
+  header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  nav .search input {
+    padding: 0.5rem;
+    margin-left: 2rem;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+  }
+  
+  .welcome .text {
+    max-width: 50%;
+  }
+  
+  .welcome .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #0055cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+  
+  .welcome .image img {
+    width: 400px;
+    border-radius: 10px;
+  }
+  
+  .questions {
+    padding: 2rem 0;
+  }
+  
+  .questions h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  .question-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .question-card {
+    background: #e6f0ff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 220px; /* Гарантована висота */
+    font-family: sans-serif;
+  }
+  
+  .question-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+  }
+  
+  .question-content h3 {
+    margin: 0;
+    color: #1a5ad7;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .question-content a {
+    margin-top: 1.5rem;
+    color: #1a5ad7;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  .question-card img {
+    width: 80px;
+    height: auto;
+    opacity: 0.5;
+    margin-left: 1rem;
+    align-self: flex-start;
+  }
+  
+  
+  .steps-section {
+    max-width: 600px;
+    padding-left: 2rem; /* зміщення зліва */
+    font-family: sans-serif;
+    color: #1a1a1a;
+  }
+  
+  .steps-section h2 {
+    color: #0051ba;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .steps {
+    position: relative;
+    margin: 2rem 0;
+    padding-left: 40px;
+  }
+  
+  
+  .step {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+  
+  .step-marker {
+    width: 12px;
+    height: 12px;
+    background-color: #0051ba;
+    border-radius: 50%;
+    position: absolute;
+    left: 13px;
+    top: 5px;
+    z-index: 1;
+  }
+  
+  .step-content {
+    margin-left: 2rem;
+  }
+  
+  .step-content strong {
+    display: block;
+    margin-bottom: 0.3rem;
+    color: #1a1a1a;
+  }
+  
+  
+  .step-content strong {
+    display: block;
+    margin-bottom: 0.3rem;
+    color: #1a1a1a;
+  }
+  
+  .note {
+    font-size: 0.9rem;
+    color: #444;
+    margin-top: 1rem;
+  }
+  
+  .form-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #0051ba;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .partners {
+    padding: 2rem 0;
+    background-color: #f7f9fc;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .partners h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  
+  
+  .partner-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-content: left;
+  }
+  
+  .partner-item {
+    height: 200px;
+    width: 300px;
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
+  }
+  
+  .partner-item img {
+    object-fit: contain;
+    border: 2px solid #d0d0d0;
+    border-radius: 12px;
+    background: white;
+    padding: 10px;
+  }
+  
+  #sponsor-1 {
+    content: url("img/sponsor_1.png");
+    transition: 0.3s ease;
+  }
+
+  #sponsor-1:hover {
+    content: url("img/sponsor_1_hover.png");
+  }
+  
+  #sponsor-2 {
+    content: url("img/sponsor_2.png");
+    transition: 0.3s ease;
+  }
+
+  #sponsor-2:hover {
+    content: url("img/sponsor_2_hover.png");
+  }
+
+  #sponsor-3 {
+    content: url("img/sponsor_3.png");
+    transition: 0.3s ease;
+  }
+
+  #sponsor-3:hover {
+    content: url("img/sponsor_3_hover.png");
+  }
+
+  #sponsor-4 {
+    content: url("img/sponsor_4.png");
+    transition: 0.3s ease;
+  }
+
+  #sponsor-4:hover {
+    content: url("img/sponsor_4_hover.png");
+  }
+
+  #sponsor-5 {
+    content: url("img/sponsor_5.png");
+    transition: 0.3s ease;
+  }
+
+  #sponsor-5:hover {
+    content: url("img/sponsor_5_hover.png");
+  }
+
+  .feedback-section {
+    width: 100%;
+    padding: 2rem 1rem;
+    font-family: sans-serif;
+  }
+  
+  .feedback-section {
+    width: 100%;
+    padding: 2rem 1rem;
+    font-family: sans-serif;
+  }
+  
+  .feedback-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .feedback-row h2 {
+    font-size: 1rem;
+    margin: 0;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  
+  .yes-no-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .feedback-row button {
+    padding: 0.6rem 1.2rem;
+    background-color: #0051ba;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .feedback-row button:hover {
+    background-color: #003d91;
+  }
+  
+  
+
+  .footer {
+    background-color: #0d47a1;
+    color: white;
+    padding: 2rem;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9rem;
+  }
+  
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer h4 {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+
+
+  
+  .subscribe-form,
+  .search-input {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .subscribe-form input,
+  .search-input input {
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    width: 200px;
+  }
+  
+  .subscribe-form button {
+    background-color: #bbdefb;
+    color: #0d47a1;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .search-icon {
+    position: absolute;
+    margin-left: -155px;
+    color: #0d47a1;
+    font-size: 1rem;
+    
+  }
+  
+  .footer-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .footer-menu a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  
+  .footer-menu .divider {
+    color: #90caf9;
+    font-weight: bold;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #e3f2fd;
+  }
+/* Кнопка-іконка */
+#menu-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+#menu-toggle img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Бічне меню */
+#side-menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color: #0051ba;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+/* Відкритий стан меню */
+#side-menu.open {
+  right: 0;
+}
+
+/* Ховаємо кнопку, коли меню відкрите */
+#side-menu.open ~ #menu-toggle {
+  display: none;
+}
+
+#side-menu ul {
+  list-style: none;
+  padding: 80px 0 0 0; /* додано верхній відступ — 80px */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+#side-menu ul li {
+  margin-bottom: 1.5rem;
+}
+
+#side-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+#side-menu ul li a:hover {
+  text-decoration: underline;
+}
+
