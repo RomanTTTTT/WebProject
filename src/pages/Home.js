@@ -23,6 +23,54 @@ import menuArrowIcon from './img/menu-arrow.png';
 import contactIcon from './img/contact.png';
 import sideMenuIcon from './img/side-menu.png';
 
+function openFormWindow() {
+  const formWindow = window.open("", "FormWindow", "width=400,height=300");
+  formWindow.document.write(`
+    <html>
+      <head>
+        <title>Форма</title>
+        <style>
+        .form-button {
+          display: inline-block;
+          margin-top: 1.5rem;
+          padding: 0.75rem 1.5rem;
+          background-color: #0051ba;
+          color: white;
+          border-radius: 6px;
+          text-decoration: none;
+          font-weight: bold;
+        }
+        input, textarea {
+          width: 100%;
+          padding: 8px;
+          margin: 5px 0;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+        textarea {
+          height: 100px;
+          resize: none;
+        }
+
+
+        </style>
+      </head>
+      <body>
+        <h2>Заповніть форму</h2>
+        <form>
+          <label>Ім'я: <input type="text" name="name"></label><br>
+          <label>Email: <input type="email" name="email"></label><br>
+          <label>Повідомлення:</label>
+          <textarea name="message"></textarea>
+
+          <button type="submit" class="form-button">Відправити</button>
+        </form>
+        <button onclick="window.close()" class="form-button">Закрити</button>
+      </body>
+    </html>
+  `);
+}
+
 function Home() {
   // State for side menu
   const [menuOpen, setMenuOpen] = useState(false);
@@ -186,7 +234,7 @@ function Home() {
              позбавлені можливості підтримувати людей фінансово.
           </p>
         
-          <a href="#" className="form-button">Заповнити форму</a>
+          <button onClick={openFormWindow} className="form-button">Заповнити форму</button>
         </section>
         
         
