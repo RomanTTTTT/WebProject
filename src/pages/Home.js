@@ -57,7 +57,7 @@ function openFormWindow() {
       </head>
       <body>
         <h2>Заповніть форму</h2>
-        <form>
+        <form id="myForm">
           <label>Ім'я: <input type="text" name="name"></label><br>
           <label>Email: <input type="email" name="email"></label><br>
           <label>Повідомлення:</label>
@@ -66,6 +66,13 @@ function openFormWindow() {
           <button type="submit" class="form-button">Відправити</button>
         </form>
         <button onclick="window.close()" class="form-button">Закрити</button>
+
+        <script>
+          document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Запобігає перезавантаженню сторінки
+            alert("Форма успішно відправлена!"); // Можеш замінити це на реальну логіку відправки
+          });
+        </script>
       </body>
     </html>
   `);
