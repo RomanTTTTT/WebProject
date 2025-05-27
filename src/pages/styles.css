@@ -487,3 +487,110 @@
   text-decoration: underline;
 }
 
+.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-theme body, 
+.dark-theme h1, 
+.dark-theme h2, 
+.dark-theme h3, 
+.dark-theme p, 
+.dark-theme a, 
+.dark-theme span, 
+.dark-theme strong, 
+.dark-theme button {
+  color: #e0e0e0 !important;
+}
+
+.dark-theme header {
+  background-color: #1a1a2e;
+}
+
+.dark-theme nav ul li a {
+  color: #e0e0e0;
+}
+
+.dark-theme nav .search input {
+  background-color: #333;
+  color: #e0e0e0;
+  border: 1px solid #444;
+}
+
+.dark-theme .welcome {
+  background-color: #1a1a2e;
+}
+
+.dark-theme .welcome .btn {
+  background-color: #0055cc;
+  color: white;
+}
+
+.dark-theme .question-card {
+  background: #333;
+}
+
+.dark-theme .question-content h3,
+.dark-theme .question-content a {
+  color: #4a90e2;
+}
+
+.dark-theme .steps-section {
+  color: #e0e0e0;
+}
+
+.dark-theme .steps-section h2 {
+  color: #4a90e2;
+}
+
+.dark-theme .step-marker {
+  background-color: #4a90e2;
+}
+
+.dark-theme .form-button {
+  background-color: #4a90e2;
+}
+
+.dark-theme .partners {
+  background-color: #1a1a2e;
+}
+
+.dark-theme .footer {
+  background-color: #0d1b2a;
+  color: #e0e0e0;
+}
+
+.dark-theme .footer-menu a {
+  color: #e0e0e0;
+}
+
+.dark-theme .footer-bottom {
+  color: #a0a0a0;
+}
+
+/* Додаткові стилі для кнопок */
+.dark-theme button {
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+}
+
+.dark-theme button:hover {
+  background-color: #444;
+}
+
+/* Покращення заголовків */
+.dark-theme h1, 
+.dark-theme h2, 
+.dark-theme h3 {
+  color: #ffffff;
+}
+
+/* Покращення читабельності тексту */
+.dark-theme p, 
+.dark-theme a, 
+.dark-theme span, 
+.dark-theme strong {
+  color: #d0d0d0;
+}

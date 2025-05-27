@@ -78,7 +78,7 @@ function openFormWindow() {
   `);
 }
 
-function Home() {
+function Home({ darkMode }) {
   // State for side menu
   const [menuOpen, setMenuOpen] = useState(false);
   
@@ -88,7 +88,7 @@ function Home() {
   };
 
   return (
-    <div className="App">
+    <div className={darkMode ? "dark-theme" : "light-theme"}>
       <header>
         <div className="container">
           <h1>Інформація під час війни для людей з інвалідністю та людей старшого віку</h1>
