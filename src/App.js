@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 import Home from './pages/Home';
 import About from './pages/About';
+import AccessibilityButton from "./pages/AccessibilityButton";
+import './pages/styles.css'
+
 
 import lightIcon from './pages/img/light_mode.png'
 import darkIcon from './pages/img/dark_mode.png'
@@ -29,6 +32,7 @@ function App() {
             <ul>
               <li><Link to="/">Головна</Link></li>
               <li><Link to="/about">Про нас</Link></li>
+              <li><AccessibilityButton darkMode={darkMode}/></li>
               <li>
               <img 
                   src={darkMode ? darkIcon : lightIcon} 
