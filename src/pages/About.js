@@ -1,9 +1,10 @@
 import React from 'react';
 import cat from './img/cat.jpg'
+import './styles.css'
 
-function About() {
+function About({ darkMode }) {
   return (
-    <div className="container">
+    <div className={darkMode ? "dark-theme" : "light-theme"}>
       <h2>Про нас</h2>
       <p>Це друга сторінка.</p>
       <p>А це кіт.</p>
