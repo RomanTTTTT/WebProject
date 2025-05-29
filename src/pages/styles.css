@@ -693,3 +693,80 @@ h2, h3 {
 .accessibility-button:hover {
   background-color: #0055cc;
 }
+
+.news-container {
+  display: flex;
+  flex-direction: column; /* Встановлюємо вертикальний напрямок */
+  align-items: center; /* Вирівнюємо по центру */
+  gap: 20px; /* Відстань між картками */
+  padding: 20px;
+}
+
+.news-item {
+  display: flex; /* Робимо картку гнучкою */
+  align-items: center; /* Вирівнюємо по вертикалі */
+  gap: 20px; /* Відступ між зображенням і текстом */
+  background: var(--card-bg, #fff);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.news-item img {
+  width: auto; /* Зберігає оригінальну ширину */
+  height: auto; /* Зберігає оригінальну висоту */
+  max-width: 150px; /* Оптимальний розмір */
+  object-fit: contain; /* Забезпечує правильне масштабування */
+}
+
+.news-content {
+  flex: 1; /* Дає тексту можливість займати весь простір */
+}
+
+.read-more {
+  margin-top: 10px;
+  background: var(--button-bg, #007bff);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.read-more:hover {
+  background: var(--button-hover-bg, #0056b3);
+}
+
+.news-item h2 {
+  color:#007bff;
+  font-size: 20px;
+  margin: 15px 10px 5px;
+  color: var(--text-color, #333);
+}
+
+.news-item .date {
+  font-size: 14px;
+  color: var(--date-color, #888);
+  margin: 0 10px 10px;
+}
+
+.news-item p {
+  font-size: 16px;
+  margin: 0 10px 15px;
+  color: var(--text-color, #444);
+}
+
+.dark-theme .news-container { 
+  background-color: #121212;
+}
+
+.dark-theme .news-item {
+  background-color: #1a1a1a;
+}
+
+.dark-theme body {
+  background-color: #121212 !important;
+}
