@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './styles.css';
 
+import searchIcon from './img/search.png';
+import homeIcon from './img/home.png';
+import menuArrowIcon from './img/menu-arrow.png';
+import contactIcon from './img/contact.png';
+
 function News({ darkMode }) {
     const [news, setNews] = useState([]);
 
@@ -45,6 +50,36 @@ function News({ darkMode }) {
                     ))
                 )}
             </main>
+            <footer className="footer">
+              <div className="footer-top">
+                <div className="subscribe">
+                  <h4>Підпишіться на наші новини</h4>
+                  <div className="subscribe-form">
+                    <input type="email" placeholder="E-Mail" />
+                    <button>Підписатися</button>
+                  </div>
+                </div>
+                <div className="search">
+                  <h4>Пошук</h4>
+                  <div className="search-container">
+                    <input type="text" placeholder="" />
+                    <img src={searchIcon} alt="Пошук" className="search-icon" />
+                  </div>
+                </div>
+              </div>
+            
+              <div className="footer-menu">
+                <a href="#"><span className="icon"><img src={homeIcon} alt="Home" /></span> Головна</a>
+                <div className="divider">|</div>
+                <a href="#"><span className="icon"><img src={menuArrowIcon} alt="Menu" /></span> Меню</a>
+                <div className="divider">|</div>
+                <a href="#"><span className="icon"><img src={contactIcon} alt="Contact" /></span> Контакти</a>
+              </div>
+            
+              <div className="footer-bottom">
+                © 2024, Інформація під час війни для людей з інвалідністю та людей старшого віку. Підтримка Access Lab
+              </div>
+            </footer>
         </div>
     );
 }
