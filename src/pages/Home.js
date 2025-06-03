@@ -90,19 +90,26 @@ function Home({ darkMode }) {
   return (
     <div className={darkMode ? "dark-theme" : "light-theme"}>
       <header>
-        <div className="container">
+        <div class="container">
           <h1>Інформація під час війни для людей з інвалідністю та людей старшого віку</h1>
           <nav>
             <ul>
               <li><a href="#">Головна</a></li>
+              <li class="separator">|</li>
               <li><a href="#">Меню</a></li>
             </ul>
-            <div className="search">
-              <input type="text" />
+            <div class="left-menu">
+              <a href="#">Темний режим</a>
+              <span class="separator">|</span>
+              <span>Пошук</span>
+              <div class="search">
+                <input type="text" placeholder="Введіть запит..." />
+              </div>
             </div>
           </nav>
         </div>
       </header>
+
 
       <main className="container">
         <section id="welcome" className="welcome">

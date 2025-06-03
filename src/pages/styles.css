@@ -23,7 +23,7 @@
   }
   
   header h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
   }
   
@@ -51,6 +51,29 @@
     border: none;
   }
   
+  .left-menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start; /* Вирівнюємо «Темний режим» вліво */
+  }
+  
+  .left-menu a {
+    color: white;
+    text-decoration: none;
+  }  
+
+  .separator {
+    margin: 0 0.5rem; /* Додає проміжок справа та зліва */
+  }
+  
+  .search {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Відстань між "Пошук" та стрічкою */
+  }
+
+
   .welcome {
     display: flex;
     align-items: center;
