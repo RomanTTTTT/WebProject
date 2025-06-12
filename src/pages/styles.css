@@ -622,25 +622,52 @@
   position: absolute;
   top: 70px;
   left: 10px;
-  background: white;
+  background: #0055cc;
   padding: 15px;
   border: 2px solid #ccc;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   width: 300px;
   font-family: Arial, sans-serif;
+  height: auto;
+}
+
+.accessibility-menu-container {
+  background-color: white;
+}
+.accessibility-menu-container.dark-theme {
+  background-color: #1e1e1e;
+  min-height: 300px;
 }
 
 .close-btn {
   background: #0055cc;
   color: white;
-  border: none;
-  padding: 5px 10px;
+  border: none;   
   cursor: pointer;
   display: block;
   width: 100%;
   text-align: center;
   margin-bottom: 10px;
+  width: 100px;  /* Встановлює однакову ширину */
+  height: 40px;  /* Фіксована висота */
+  padding: 5px 10px;
+  box-sizing: border-box; /* Запобігає змінам через padding */
+  float:right;
 }
+
+.close-btn-container {
+  display: block; /* Гарантує, що кнопка займає окремий рядок */
+  width: 100%; /* Розтягує контейнер на всю ширину */
+  margin-bottom: 10px; /* Додає простір між кнопкою і заголовком */
+}
+.accessibility-settings {
+  display: flex;
+  flex-direction: column; /* Робить елементи вертикальними */
+  align-items: center; /* Вирівнює по центру */
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 
 .reset-btn {
   background: #0055cc;
@@ -650,11 +677,23 @@
   cursor: pointer;
   margin-bottom: 10px;
   display: block;
+  width: 100px;  /* Встановлює однакову ширину */
+  height: 40px;  /* Фіксована висота */
+  padding: 5px 10px;
+  box-sizing: border-box; /* Запобігає змінам через padding */
 }
+
+.filters-container {
+  display: flex;
+  align-items: center; 
+  gap: 10px; 
+}
+
 
 h2, h3 {
   font-size: 18px;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .option {
@@ -678,14 +717,19 @@ h2, h3 {
 }
 
 .accessibility-menu.dark-theme {
-  background: #1e1e1e;
+  background: #4a90e2;
   color: #e0e0e0;
   border: 2px solid #333;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  height: auto;
+  min-height: 300px;
 }
 
 .accessibility-menu.dark-theme .close-btn,
 .accessibility-menu.dark-theme .reset-btn {
+  width: 100px;
+  height: 40px;
+  padding: 5px 10px;
   background: #4a90e2;
   color: white;
 }
