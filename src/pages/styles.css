@@ -793,3 +793,13 @@ h2, h3 {
 .dark-theme body {
   background-color: #121212 !important;
 }
+.dark-theme, .light-theme {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.news-container {
+  flex: 1;
+  padding: 20px;
+}
